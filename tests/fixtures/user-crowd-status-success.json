@@ -1,0 +1,12 @@
+{
+  "code": "0",
+  "msg": "success",
+  "data": {
+    "appId": "synthetic-app",
+    "crowdId": "synthetic-crowd-1",
+    "taskId": 1001,
+    "uidType": "GTCID",
+    "status": 1,
+    "fileIdList": ["synthetic-file-1"]
+  }
+}

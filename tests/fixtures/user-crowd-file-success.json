@@ -1,0 +1,8 @@
+{
+  "code": 0,
+  "msg": "success",
+  "data": {
+    "list": ["synthetic-gtcid-1", "synthetic-gtcid-2"],
+    "total": 2
+  }
+}

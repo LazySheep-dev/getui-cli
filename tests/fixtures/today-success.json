@@ -1,0 +1,24 @@
+{
+  "data": {
+    "list": [
+      {
+        "dimension": "total",
+        "statisticsData": {
+          "install": { "cnt": 120, "ytdPercent": "11.11", "sevenPercent": "8.25" },
+          "active": { "cnt": "980", "ytdPercent": "-2.50", "sevenPercent": "4.75" },
+          "start": { "cnt": 2200, "ytdPercent": null, "sevenPercent": "6.00" }
+        }
+      },
+      {
+        "dimension": "android",
+        "statisticsData": {
+          "install": { "cnt": "80", "ytdPercent": "10", "sevenPercent": "7" },
+          "active": { "cnt": 650, "ytdPercent": "-1", "sevenPercent": "3" },
+          "start": { "cnt": "1500", "ytdPercent": "2", "sevenPercent": "5" }
+        }
+      }
+    ]
+  },
+  "code": 0,
+  "msg": "success"
+}

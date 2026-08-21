@@ -1,0 +1,8 @@
+{
+  "data": {
+    "token": "fixture-token-value",
+    "expireTime": "1786080000000"
+  },
+  "msg": "success",
+  "code": 0
+}

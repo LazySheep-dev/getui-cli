@@ -1,0 +1,15 @@
+{
+  "code": "0",
+  "msg": "success",
+  "data": {
+    "list": [
+      {
+        "crowdId": "synthetic-crowd-1",
+        "crowdName": "Synthetic crowd",
+        "crowdCount": 2,
+        "lastCompleteTime": "2026-08-01 00:00:00"
+      }
+    ],
+    "total": 1
+  }
+}

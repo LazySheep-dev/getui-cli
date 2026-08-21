@@ -1,0 +1,24 @@
+{
+  "code": 0,
+  "msg": "success",
+  "data": {
+    "list": [
+      {
+        "dimension": "total",
+        "statisticsData": {
+          "itemName": "active users",
+          "todayData": [
+            { "time": "00:00:00", "value": "127" },
+            { "time": "01:00:00", "value": 140 }
+          ],
+          "yesterdayData": [
+            { "time": "00:00:00", "value": "119" }
+          ],
+          "sevenDayData": [
+            { "time": "00:00:00", "value": "125" }
+          ]
+        }
+      }
+    ]
+  }
+}

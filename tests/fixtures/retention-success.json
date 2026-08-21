@@ -1,0 +1,52 @@
+{
+  "code": 0,
+  "msg": "success",
+  "data": {
+    "list": [
+      {
+        "dimension": "total",
+        "statisticsData": [
+          {
+            "date": "2026-08-01",
+            "userCount": 83852,
+            "yesterdayPercent": 31.95,
+            "twoDayPercent": "26.34",
+            "threeDayPercent": 21.36,
+            "fourDayPercent": "28.44",
+            "fiveDayPercent": 24.46,
+            "sixDayPercent": "26.39",
+            "sevenDayPercent": 14.27,
+            "thirtyDayPercent": null
+          },
+          {
+            "date": "2026-08-02",
+            "userCount": "50000",
+            "yesterdayPercent": "30.10",
+            "twoDayPercent": "25.00",
+            "threeDayPercent": "20.00",
+            "fourDayPercent": "18.00",
+            "fiveDayPercent": "17.00",
+            "sixDayPercent": "16.00",
+            "sevenDayPercent": "15.00",
+            "thirtyDayPercent": "0"
+          }
+        ]
+      },
+      {
+        "dimension": "android",
+        "statisticsData": {
+          "date": "2026-08-01",
+          "userCount": 50000,
+          "yesterdayPercent": 30,
+          "twoDayPercent": 24,
+          "threeDayPercent": 20,
+          "fourDayPercent": 18,
+          "fiveDayPercent": 16,
+          "sixDayPercent": 15,
+          "sevenDayPercent": 14,
+          "thirtyDayPercent": 0
+        }
+      }
+    ]
+  }
+}

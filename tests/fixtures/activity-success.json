@@ -1,0 +1,44 @@
+{
+  "code": 0,
+  "msg": "success",
+  "data": {
+    "list": [
+      {
+        "dimension": "total",
+        "statisticsData": {
+          "ytd": { "total": 1000, "mom": "0.35" },
+          "week": { "total": "4200", "mom": "0.12" },
+          "month": { "total": 15000, "mom": "-0.05" },
+          "mau": { "total": "0.2511", "mom": "0.03" }
+        }
+      },
+      {
+        "dimension": "ios",
+        "statisticsData": {
+          "ytd": { "total": "400", "mom": null },
+          "week": { "total": 1600, "mom": "0.08" },
+          "month": { "total": "5800", "mom": "-0.01" },
+          "mau": { "total": 0.21, "mom": "0.02" }
+        }
+      },
+      {
+        "dimension": "鸿蒙",
+        "statisticsData": {
+          "ytd": { "total": 37050, "mom": "-" },
+          "week": { "total": 99824, "mom": "-" },
+          "month": { "total": 162845, "mom": "-" },
+          "mau": { "total": "0.2275", "mom": "-" }
+        }
+      },
+      {
+        "dimension": "unknown",
+        "statisticsData": {
+          "ytd": { "total": 0, "mom": "-" },
+          "week": { "total": 0, "mom": "-" },
+          "month": { "total": 0, "mom": "-" },
+          "mau": { "total": "-", "mom": "-" }
+        }
+      }
+    ]
+  }
+}

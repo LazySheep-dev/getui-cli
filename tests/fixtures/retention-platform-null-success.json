@@ -1,0 +1,81 @@
+{
+  "code": 0,
+  "msg": "success",
+  "data": {
+    "list": [
+      {
+        "dimension": "total",
+        "statisticsDataList": [
+          {
+            "date": "2026-07-01",
+            "userCount": 116285,
+            "yesterdayPercent": 47.39,
+            "twoDayPercent": 45.05,
+            "threeDayPercent": 42.87,
+            "fourDayPercent": 41.64,
+            "fiveDayPercent": 43.01,
+            "sixDayPercent": 44.76,
+            "sevenDayPercent": 45.41,
+            "thirtyDayPercent": 39.5
+          }
+        ]
+      },
+      {
+        "dimension": "Android",
+        "statisticsDataList": [
+          {
+            "date": "2026-07-01",
+            "userCount": "38478",
+            "yesterdayPercent": 47.3,
+            "twoDayPercent": 44.97,
+            "threeDayPercent": 42.97,
+            "fourDayPercent": 41.87,
+            "fiveDayPercent": 43.06,
+            "sixDayPercent": 44.83,
+            "sevenDayPercent": 45.37,
+            "thirtyDayPercent": 39.56
+          }
+        ]
+      },
+      {
+        "dimension": "iOS",
+        "statisticsDataList": [
+          {
+            "date": "2026-07-01",
+            "userCount": 38963,
+            "yesterdayPercent": 47.09,
+            "thirtyDayPercent": 39.59
+          }
+        ]
+      },
+      {
+        "dimension": "鸿蒙",
+        "statisticsDataList": [
+          {
+            "date": "2026-07-01",
+            "userCount": 38844,
+            "yesterdayPercent": 47.78,
+            "thirtyDayPercent": 39.35
+          }
+        ]
+      },
+      {
+        "dimension": "unknown",
+        "statisticsDataList": [
+          {
+            "date": "2026-07-01",
+            "userCount": null,
+            "yesterdayPercent": null,
+            "twoDayPercent": null,
+            "threeDayPercent": null,
+            "fourDayPercent": null,
+            "fiveDayPercent": null,
+            "sixDayPercent": null,
+            "sevenDayPercent": null,
+            "thirtyDayPercent": null
+          }
+        ]
+      }
+    ]
+  }
+}

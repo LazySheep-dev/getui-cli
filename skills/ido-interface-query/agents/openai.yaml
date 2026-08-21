@@ -1,0 +1,4 @@
+interface:
+  display_name: "IDO 接口查询"
+  short_description: "用自然语言查询个推统计、标签、用户数据、用户群与用户向量"
+  default_prompt: "使用 $ido-interface-query 查询个推 IDO 接口数据。"

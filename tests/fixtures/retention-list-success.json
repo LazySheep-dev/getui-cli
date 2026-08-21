@@ -1,0 +1,31 @@
+{
+  "code": 0,
+  "msg": "success",
+  "data": {
+    "list": [
+      {
+        "dimension": "total",
+        "statisticsDataList": [
+          {
+            "date": "2026-07-31",
+            "userCount": 108344,
+            "yesterdayPercent": 44.67,
+            "twoDayPercent": 42.21,
+            "threeDayPercent": 43.59,
+            "fourDayPercent": 45.41,
+            "fiveDayPercent": 45.51,
+            "sixDayPercent": 44.06,
+            "sevenDayPercent": 43.4,
+            "thirtyDayPercent": 0
+          },
+          {
+            "date": "2026-08-01",
+            "userCount": 102502,
+            "yesterdayPercent": 45.69,
+            "thirtyDayPercent": 0
+          }
+        ]
+      }
+    ]
+  }
+}

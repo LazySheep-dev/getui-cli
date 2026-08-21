@@ -1,0 +1,17 @@
+node_modules/
+dist/
+package/dist/
+*.tgz
+
+token
+.env
+.env.*
+!.env.example
+
+.DS_Store
+translate
+.agents
+docs
+
+skills/getui-statistics
+skills/getui-user-operations
