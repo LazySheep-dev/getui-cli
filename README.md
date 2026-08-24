@@ -133,7 +133,7 @@ getui-cli --format table api call statistics.today --input '{"date":"2026-08-20"
 - `skills/getui-user-operations/`：标签、用户、用户群和向量操作
 - `skills/ido-interface-query/`：统一的 IDO 查询入口
 
-将对应 Skill 目录安装到 Codex 的 skills 目录后即可使用。Skill 依赖已经安装并可执行的 `getui-cli`，不会直接访问个推 HTTP API。
+将对应 Skill 目录安装到 Codex 的 skills 目录后即可使用,可让codex直接安装。Skill 依赖已经安装并可执行的 `getui-cli`，不会直接访问个推 HTTP API。
 
 ## 开发与测试
 
