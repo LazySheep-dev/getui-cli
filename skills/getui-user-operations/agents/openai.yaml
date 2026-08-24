@@ -1,0 +1,4 @@
+interface:
+  display_name: "Getui User Operations"
+  short_description: "用自然语言查询个推标签、用户数据、用户群与用户向量"
+  default_prompt: "使用 $getui-user-operations 查询或管理个推标签、用户数据、用户群和用户向量。"

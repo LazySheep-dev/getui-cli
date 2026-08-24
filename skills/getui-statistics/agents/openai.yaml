@@ -1,0 +1,4 @@
+interface:
+  display_name: "Getui Statistics"
+  short_description: "通过自然语言查询并解释个推用户运营统计数据、趋势与留存表现"
+  default_prompt: "使用 $getui-statistics 查询并解释个推统计数据。"
