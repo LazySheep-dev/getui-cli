@@ -1,0 +1,4 @@
+interface:
+  display_name: "Getui 环境装配"
+  short_description: "安装并配置 Getui CLI 与 Agent Skills"
+  default_prompt: "使用 $getui-environment-setup 安装、配置并验证 Getui CLI 与 Skills。"

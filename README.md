@@ -1,6 +1,6 @@
 # Getui IDO CLI & Skills
 
-一个面向 Agent 的个推 IDO 命令行工具，提供统计查询、标签与用户操作、用户群导出和用户向量查询，并附带可供 Codex 使用的 Skills。
+一个面向 Agent 的个推 IDO 命令行工具，提供统计查询、标签与用户操作、用户群导出和用户向量查询，并附带兼容 `SKILL.md` 规范的 Agent Skills。
 
 ## 功能
 
@@ -125,15 +125,35 @@ getui-cli --format table api call statistics.today --input '{"date":"2026-08-20"
 
 默认输出为 JSON envelope。只有明确需要原始（已脱敏）响应时才使用 `--raw`；排查问题时可将 `--debug` 输出到标准错误。
 
-## Codex Skills
+## Agent Skills
 
 仓库包含以下 Skills：
 
 - `skills/getui-statistics/`：自然语言统计查询
 - `skills/getui-user-operations/`：标签、用户、用户群和向量操作
 - `skills/ido-interface-query/`：统一的 IDO 查询入口
+- `skills/getui-environment-setup/`：通过 Agent 安装、配置并验证 CLI 和 Skills
 
-将对应 Skill 目录安装到 Codex 的 skills 目录后即可使用,可让codex直接安装。Skill 依赖已经安装并可执行的 `getui-cli`，不会直接访问个推 HTTP API。
+这些 Skill 使用标准目录结构：每个 Skill 目录包含 `SKILL.md`，可供支持该规范的 Agent 客户端加载。请按照客户端的官方方式，将 Skill 目录放入其 Skills 目录或通过其导入功能安装；不要假定所有客户端都使用 Codex 的目录。
+
+也可以先安装 `getui-environment-setup`，然后对 Agent 说“帮我安装并配置 Getui CLI 和所有配套 Skills”，让 Agent 根据当前客户端完成环境检查、仓库克隆、依赖安装、构建、命令注册和验证。业务查询 Skill 依赖已经安装并可执行的 `getui-cli`，不会直接访问个推 HTTP API。
+
+### Codex
+
+Codex 默认目录为 `${CODEX_HOME:-$HOME/.codex}/skills/`。安装后重启 Codex 或新建任务以重新加载 Skills。
+
+### 其他 Agent 客户端
+
+先查找客户端的 Skills/插件目录或配置入口，将以下目录作为独立 Skill 导入：
+
+```text
+skills/getui-environment-setup/
+skills/ido-interface-query/
+skills/getui-statistics/
+skills/getui-user-operations/
+```
+
+如果客户端不支持 `SKILL.md` 目录格式，需要使用该客户端的官方导入或插件机制；本项目不把某个客户端的专有配置当作通用配置。
 
 ## 开发与测试
 
