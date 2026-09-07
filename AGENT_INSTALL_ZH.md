@@ -3,10 +3,10 @@
 将下面整段内容直接交给支持执行本地命令的 Agent 客户端。客户端必须严格按顺序执行，任一步失败立即停止并报告实际错误，不得假装完成。
 
 ```text
-请自动安装 Getui IDO CLI 和全部 Agent Skills。
+请自动安装 Getui IDO CLI 和唯一的主 Agent Skill。
 
 仓库： https://github.com/LazySheep-dev/getui-cli.git
-Skills：getui-environment-setup、ido-interface-query、getui-statistics、getui-user-operations
+Skill：ido-interface-query（已内置环境装配、统计和用户操作能力）
 
 1. 查找 Skills 目录（先去重）：
 [ -d "$HOME/.agents/skills" ] && echo "USER: $HOME/.agents/skills"
@@ -28,15 +28,12 @@ npm link
 
 每步成功后才能继续。用 getui-cli --version 和 getui-cli operations list 验证；npm link 失败时必须报告 CLI 未全局注册。
 
-4. 安装以下完整 Skill 目录到 "$SKILLS_DIR"：
-skills/getui-environment-setup/
+4. 只安装以下一个完整 Skill 目录到 "$SKILLS_DIR"：
 skills/ido-interface-query/
-skills/getui-statistics/
-skills/getui-user-operations/
 
-每个目标已有 SKILL.md 时先询问是否覆盖；拒绝则停止。覆盖前先备份原目录。复制时必须保留 SKILL.md、agents/ 和 references/。客户端不支持目录式 SKILL.md 时，改用其官方导入/插件机制并报告结果。
+目标已有 SKILL.md 时先询问是否覆盖；拒绝则停止。覆盖前先备份原目录。复制时必须保留 SKILL.md、agents/ 和全部 references/。主 Skill 已内置另外三个子 Skill 的能力，不要再下载或安装它们。客户端不支持目录式 SKILL.md 时，改用其官方导入/插件机制并报告结果。
 
-5. 验证：确认 getui-cli --version、getui-cli operations list 成功，且四个目标 Skill 的 SKILL.md 存在且非空。报告 CLI 路径和版本、仓库路径、SKILLS_DIR、每个 Skill 状态，并提示重启或新建 Agent 任务刷新 Skill 列表。
+5. 验证：确认 getui-cli --version、getui-cli operations list 成功，且 "$SKILLS_DIR/ido-interface-query/SKILL.md" 存在且非空。报告 CLI 路径和版本、仓库路径、SKILLS_DIR、主 Skill 状态，并提示重启或新建 Agent 任务刷新 Skill 列表。
 
 没有凭证时不要执行真实 IDO 查询；标记为“CLI 和 Skills 已安装，业务凭证待配置”。不要要求用户在聊天中发送 App Key、Master Secret 或 Token。只有用户明确要求配置凭证时，才让用户在本机终端执行：
 getui-cli app add <alias> --app-id '<APP_ID>' --app-key '<APP_KEY>'

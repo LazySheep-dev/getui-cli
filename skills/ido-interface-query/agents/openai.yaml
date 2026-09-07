@@ -1,4 +1,4 @@
 interface:
   display_name: "IDO 接口查询"
-  short_description: "装配 Getui 环境，并路由统计、标签、用户群与向量查询"
-  default_prompt: "使用 $ido-interface-query 安装配置 Getui 环境或查询个推 IDO 数据。"
+  short_description: "一个 Skill 完成 Getui 环境装配与全部 IDO 服务查询"
+  default_prompt: "使用 $ido-interface-query 安装配置 Getui 环境，或查询个推统计、标签、用户群与向量数据。"
