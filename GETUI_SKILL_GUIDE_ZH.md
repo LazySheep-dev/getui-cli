@@ -105,18 +105,17 @@ skills/getui-user-operations/
 
 ## 五、如何配置个推凭证
 
-安装 CLI 和 Skill 不等于已经配置业务凭证。需要查询真实数据时，在本机终端执行：
+安装 CLI 和 Skill 不等于已经配置业务凭证。需要查询真实数据时，在本机终端设置环境变量：
 
 ```bash
-getui-cli app add production \
-  --app-id '<YOUR_APP_ID>' \
-  --app-key '<YOUR_APP_KEY>'
+export GETUI_APP_ID='<YOUR_APP_ID>'
+export GETUI_APP_KEY='<YOUR_APP_KEY>'
+export GETUI_MASTER_SECRET='<YOUR_MASTER_SECRET>'
 
-getui-cli app use production
 getui-cli app status
 ```
 
-Master Secret 应在终端的隐藏输入中填写，不要发送到聊天窗口，也不要提交到 GitHub。
+这些环境变量默认只对当前终端会话生效。如需持久化，请写入本机私密的 shell 配置，并确保该配置不会提交到 Git。不要把真实凭证发送到聊天窗口或提交到 GitHub。
 
 没有配置凭证时，可以完成安装验证，但不能查询真实 IDO 数据。
 
