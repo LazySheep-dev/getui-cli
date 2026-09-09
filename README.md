@@ -1,4 +1,5 @@
 # 个推 IDO Skill 使用指南
+使用前必须配有*node18+环境*，getui-cli的所有命令都依赖这个环境
 
 ## 一、什么是个推 IDO Skill
 
@@ -107,11 +108,41 @@ skills/ido-interface-query/
 export GETUI_APP_ID='<YOUR_APP_ID>'
 export GETUI_APP_KEY='<YOUR_APP_KEY>'
 export GETUI_MASTER_SECRET='<YOUR_MASTER_SECRET>'
-
-getui-cli app status
 ```
 
-这些环境变量默认只对当前终端会话生效。如需持久化，请写入本机私密的 shell 配置，并确保该配置不会提交到 Git。不要把真实凭证发送到聊天窗口或提交到 GitHub。
+以上命令只对当前终端会话生效。要写入永久环境变量，请按所使用的操作系统配置：
+
+#### macOS
+
+将以下内容追加到 shell 配置文件（通常为 `~/.zshrc`；使用 Bash 时为 `~/.bash_profile`）：
+
+```bash
+export GETUI_APP_ID='xxx'
+export GETUI_APP_KEY='xxx'
+export GETUI_MASTER_SECRET='xxx'
+```
+
+保存后重新打开终端，或执行 `source ~/.zshrc`（Bash 用户执行 `source ~/.bash_profile`）使配置生效。
+
+#### Windows
+
+在 PowerShell 中执行以下命令，将凭证写入当前用户的永久环境变量：
+
+```powershell
+[Environment]::SetEnvironmentVariable('GETUI_APP_ID', 'xxx', 'User')
+[Environment]::SetEnvironmentVariable('GETUI_APP_KEY', 'xxx', 'User')
+[Environment]::SetEnvironmentVariable('GETUI_MASTER_SECRET', 'xxx', 'User')
+```
+
+执行后重新打开 PowerShell 或命令提示符，已打开的终端不会自动读取新变量。也可以在“系统设置 → 系统 → 关于 → 高级系统设置 → 环境变量”中新增这三个用户变量。
+
+永久配置完成后，即可运行个推命令。可运行以下命令检查当前终端是否已读取凭证（不会输出凭证值）：
+
+```bash
+getui-cli status
+```
+
+请将 `xxx` 替换为真实值，并确保 shell 配置文件或 Windows 用户环境变量不会被提交、共享或发送到聊天窗口。
 
 没有配置凭证时，可以完成安装验证，但不能查询真实 IDO 数据。
 
